@@ -10,7 +10,7 @@ export const handler = async (event) => {
   }
 
   try {
-    const data = JSON.parse(event.body)
+    const data = event.body
     // Add TypeScript typings and process data here
     console.log('incoming JSON data', data)
 
