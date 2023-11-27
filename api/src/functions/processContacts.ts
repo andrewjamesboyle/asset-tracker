@@ -1,6 +1,4 @@
-import type { APIGatewayEvent } from 'aws-lambda'
-
-export const handler = async (event: APIGatewayEvent) => {
+export const handler = async (event) => {
   console.log('raw event', event.body)
 
   // Only allow POST requests
