@@ -1,6 +1,4 @@
 export const handler = async (event) => {
-  console.log('raw event', event.body)
-
   // Only allow POST requests
   if (event.httpMethod !== 'POST') {
     return {
@@ -10,10 +8,7 @@ export const handler = async (event) => {
   }
 
   try {
-    const data = event.body
-    // Add TypeScript typings and process data here
-    console.log('incoming JSON data', data)
-
+    console.log('event.body', event.body)
     return {
       statusCode: 200,
       body: JSON.stringify({ message: 'Hello World' }),
