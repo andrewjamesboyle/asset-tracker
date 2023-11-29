@@ -123,6 +123,12 @@ The best way to learn Redwood is by going through the comprehensive [tutorial](h
 
 ## TODO
 
+FRONT END:
+- [ ] Create a google form that accepts a CSV file upload
+- [ ] Write Apps Script that parses the CSV file into a JSON object
+- [ ] Send a POST request to this API with the JSON object
+- [ ] Include an authentication mechanism with the POST request
+
 API SIDE:
 - [ ] Accept a JSON object of contacts
 - [ ] Format this into a Property Radar Request Object
@@ -135,8 +141,4 @@ API SIDE:
 - [ ] Return the property data, **match to the original contact data** (need to research how this works -- possibly need a DB for persistence, if this is true, the next step will change), convert this into an Excel Spreadsheet
 - [ ] Upload the Excel Spreadsheet to Pro Insight's Google Drive in the appropriate folder
 
-FRONT END:
-- [ ] Create a google form that accepts a CSV file upload
-- [ ] Write Apps Script that parses the CSV file into a JSON object
-- [ ] Send a POST request to this API with the JSON object
-- [ ] Include an authentication mechanism with the POST request
+
