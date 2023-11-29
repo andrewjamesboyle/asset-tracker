@@ -120,3 +120,23 @@ The best way to learn Redwood is by going through the comprehensive [tutorial](h
 
 - Stay updated: read [Forum announcements](https://community.redwoodjs.com/c/announcements/5), follow us on [Twitter](https://twitter.com/redwoodjs), and subscribe to the [newsletter](https://redwoodjs.com/newsletter)
 - [Learn how to contribute](https://redwoodjs.com/docs/contributing)
+
+## TODO
+
+API SIDE:
+- [ ] Accept a JSON object of contacts
+- [ ] Format this into a Property Radar Request Object
+- [ ] Send a post request with this data to Property Radar's Create a List endpoint - setting list type to 'import'
+- [ ] Return the list id from the response
+- [ ] Send a post request to Property Radar's Match and Import to List endpoint
+- [ ] Send a GET request to View Imported Matches
+- [ ] Return the list of Radar ID's
+- [ ] For each Radar ID, send a GET request to Property From Radar ID endpoint
+- [ ] Return the property data, **match to the contact data** (need to research how this works), and convert this into an Excel Spreadsheet
+- [ ] Upload the Excel Spreadsheet to Pro Insight's Google Drive in the appropriate folder
+
+FRONT END:
+- [ ] Create a google form that accepts a CSV file upload
+- [ ] Write Apps Script that parses the CSV file into a JSON object
+- [ ] Send a POST request to this API with the JSON object
+- [ ] Include an authentication mechanism with the POST request
