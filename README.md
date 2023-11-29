@@ -131,8 +131,8 @@ API SIDE:
 - [ ] Send a post request to Property Radar's Match and Import to List endpoint
 - [ ] Send a GET request to View Imported Matches
 - [ ] Return the list of Radar ID's
-- [ ] For each Radar ID, send a GET request to Property From Radar ID endpoint
-- [ ] Return the property data, **match to the contact data** (need to research how this works), and convert this into an Excel Spreadsheet
+- [ ] For each Radar ID, send a GET request to Property From Radar ID endpoint (*note: the API has a rate limit of 300 requests per second. We will need to handle concurrency as well as rate limiting in the event that multiple users upload files at roughly the same time, or if the same user uploads multiple files at once. Might use a semaphore for this.*)
+- [ ] Return the property data, **match to the original contact data** (need to research how this works -- possibly need a DB for persistence, if this is true, the next step will change), convert this into an Excel Spreadsheet
 - [ ] Upload the Excel Spreadsheet to Pro Insight's Google Drive in the appropriate folder
 
 FRONT END:
