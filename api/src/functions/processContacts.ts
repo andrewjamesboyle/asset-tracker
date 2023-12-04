@@ -11,12 +11,14 @@ export const handler = async () => {
 
   try {
     const data = await createList()
-    return data
+    return {
+      statusCode: 200,
+      body: JSON.stringify(data),
+    }
   } catch (error) {
-    console.log(error.message)
-    // return {
-    //   status: 400,
-    //   body: JSON.stringify({ error: 'Bad Request: ' + error.message }),
-    // }
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: 'Bad Request: ' + error.message }),
+    }
   }
 }
