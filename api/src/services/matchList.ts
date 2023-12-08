@@ -4,7 +4,7 @@ import fetch from 'node-fetch'
 //   listId: number
 // }
 
-export const matchList = async (listId, contacts) => {
+const matchList = async (listId, contacts) => {
   const query = new URLSearchParams({
     Purchase: '0',
     Fields: 'ListImportItemID',
@@ -22,8 +22,10 @@ export const matchList = async (listId, contacts) => {
       }
     )
     const data = await response.json()
-    console.log('data', data)
+    console.log('match and import response', data)
   } catch (error) {
     console.error('Request Error:', error)
   }
 }
+
+export default matchList
