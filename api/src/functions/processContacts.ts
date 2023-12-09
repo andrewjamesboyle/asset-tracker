@@ -2,8 +2,10 @@ import createList from 'src/services/createList'
 import matchList from 'src/services/matchList'
 import { viewList } from 'src/services/viewList'
 
-export const handler = async () => {
-  // Only allow POST requests
+export const handler = async (contacts) => {
+  // To Do: Only allow POST requests
+  // To Do: validate source
+  // To Do: DB.create(contacts)? store the agent name, email, and contacts
 
   try {
     const listData = await createList().catch((error) => {
@@ -19,7 +21,12 @@ export const handler = async () => {
     const contactsInList = await viewList(ListID).catch((error) => {
       throw new Error('Error viewing list: ' + error.message)
     })
-    // To Do: extract radar ID's from contacts in List,
+    // To Do: const properties = extract radar ID's from contacts in List
+    // To Do: DB.create(properties)
+    // To Do: const additionalProperties = GET request to viewOwners to grab additional Radar ID's for each owner
+    // To Do: DB.update(additionalProperties)
+    // To Do: const propDetails = for each radar ID, GET request to properties from radar ID for details
+    // To Do: DB.update(propDetails)
     return {
       statusCode: 200,
       body: JSON.stringify(contactsInList),
@@ -32,14 +39,14 @@ export const handler = async () => {
   }
 }
 
-const contacts = [
-  {
-    FullName: 'ABELINA TORAL',
-    Address: '417 HILDA ST',
-    City: 'OREGON CITY',
-    State: 'OR',
-    ZipFive: 97045,
-  },
+// const contacts = [
+//   {
+//     FullName: 'ABELINA TORAL',
+//     Address: '417 HILDA ST',
+//     City: 'OREGON CITY',
+//     State: 'OR',
+//     ZipFive: 97045,
+//   },
   // {
   //   FullName: 'ADAM R KRISS',
   //   Address: '1422 SE 209TH AVE',
@@ -733,4 +740,4 @@ const contacts = [
   //   State: 'OR',
   //   ZipFive: 97068,
   // },
-]
+// ]
