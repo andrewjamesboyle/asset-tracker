@@ -22,3 +22,20 @@ export const handler = async () => {
     }
   }
 }
+
+const contacts = [
+  {
+    FullName: 'ABELINA TORAL',
+    Address: '417 HILDA ST',
+    City: 'OREGON CITY',
+    State: 'OR',
+    ZipFive: 97045,
+  },
+  {
+    FullName: 'ADAM R KRISS',
+    Address: '1422 SE 209TH AVE',
+    City: 'GRESHAM',
+    State: 'OR',
+    ZipFive: 97030,
+  },
+]

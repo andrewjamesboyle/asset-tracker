@@ -9,7 +9,7 @@ const createList = async () => {
         Authorization: `Bearer ${process.env.PROPERTY_RADAR_API_KEY}`,
       },
       body: JSON.stringify({
-        ListName: 'Risk Assessment 9',
+        ListName: 'Risk Assessment 13',
         ListType: 'import',
         isMonitored: 0,
         ImportSource: 'api',

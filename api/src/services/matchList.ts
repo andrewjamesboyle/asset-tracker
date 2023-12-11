@@ -6,7 +6,7 @@ import fetch from 'node-fetch'
 
 const matchList = async (listId, contacts) => {
   const query = new URLSearchParams({
-    Purchase: '0',
+    Purchase: '1',
     Fields: 'ListImportItemID',
   }).toString()
   try {
@@ -29,3 +29,5 @@ const matchList = async (listId, contacts) => {
 }
 
 export default matchList
+
+
