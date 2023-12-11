@@ -25,4 +25,5 @@ export async function viewList(ListID) {
 
   const data = await resp.json()
   console.log('view list response ', data)
+  return data
 }

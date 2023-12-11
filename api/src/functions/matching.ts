@@ -1,6 +1,4 @@
-import { matchList } from 'src/services/matchList'
-
-
+import matchList from 'src/services/matchList'
 
 export const handler = async () => {
   // Only allow POST requests
