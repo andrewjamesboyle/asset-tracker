@@ -7,9 +7,9 @@ export async function viewList(ListID) {
     Sort: 'ListImportItemID',
     Dir: 'desc',
     Start: '0',
-    MatchScore: '50',
+    MatchScore: '0',
     PropertyStatus: 'Selected',
-    PersonStatus: 'Matched Primary',
+    PersonStatus: 'Matched',
   }).toString()
 
   // const listId = '778870'
